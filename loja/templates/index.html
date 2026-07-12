@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Início | Loja Pé Confortável
+{% endblock %}
+
+{% block content %}
+
+<div class="text-center mb-5">
+    <h1 class="display-5 fw-bold">
+        Loja Pé Confortável
+    </h1>
+
+    <p class="lead text-muted">
+        Sistema de gerenciamento de clientes e produtos.
+    </p>
+</div>
+
+<div class="row g-4">
+
+    <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+
+                <h2 class="h4">Clientes</h2>
+
+                <p class="text-muted">
+                    Cadastre, consulte e edite os clientes da loja.
+                </p>
+
+                <div class="d-grid gap-2">
+                    <a href="{% url 'lista_clientes' %}" class="btn btn-primary">
+                        Listar clientes
+                    </a>
+
+                    <a href="{% url 'cadastrar_cliente' %}" class="btn btn-outline-primary">
+                        Cadastrar cliente
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+
+                <h2 class="h4">Produtos</h2>
+
+                <p class="text-muted">
+                    Cadastre, consulte, edite e exclua produtos.
+                </p>
+
+                <div class="d-grid gap-2">
+                    <a href="{% url 'lista_produtos' %}" class="btn btn-success">
+                        Listar produtos
+                    </a>
+
+                    <a href="{% url 'cadastrar_produto' %}" class="btn btn-outline-success">
+                        Cadastrar produto
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

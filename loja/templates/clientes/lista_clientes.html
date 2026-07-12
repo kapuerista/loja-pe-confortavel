@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Clientes | Loja Pé Confortável
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="h3 mb-1">Clientes</h1>
+        <p class="text-muted mb-0">
+            Clientes cadastrados no sistema.
+        </p>
+    </div>
+
+    <a href="{% url 'cadastrar_cliente' %}" class="btn btn-primary">
+        Cadastrar cliente
+    </a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+
+        {% if clientes %}
+
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                        <th class="text-center">Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for cliente in clientes %}
+                    <tr>
+                        <td>{{ cliente.nome }}</td>
+                        <td>{{ cliente.cpf }}</td>
+                        <td>{{ cliente.telefone }}</td>
+                        <td>{{ cliente.email }}</td>
+
+                        <td class="text-center">
+                            <a href="{% url 'editar_cliente' cliente.id %}" class="btn btn-sm btn-outline-primary">
+                                Editar
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-info mb-0">
+            Nenhum cliente foi cadastrado.
+        </div>
+
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,378 @@
+/* ===========================
+      IDENTIDADE VISUAL
+=========================== */
+
+:root{
+
+    --primaria:#0B5D69;
+    --primaria-hover:#094A54;
+
+    --secundaria:#3BBFA7;
+
+    --fundo:#F7F8FA;
+
+    --card:#FFFFFF;
+
+    --texto:#273238;
+
+    --texto-claro:#7B8A8F;
+
+    --cor-perigo:#E76F51;
+
+    --borda:#E3E7EB;
+
+    --radius:16px;
+
+}
+
+/* ===========================
+        BODY
+=========================== */
+
+body{
+
+    background:var(--fundo);
+
+    color:var(--texto);
+
+    font-family:
+        "Segoe UI",
+        sans-serif;
+
+}
+
+/* ===========================
+      NAVBAR
+=========================== */
+
+.navbar{
+
+    background:linear-gradient(
+        135deg,
+        var(--primaria),
+        #0A4A54
+    ) !important;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.12);
+
+}
+
+.navbar-brand{
+
+    font-weight:700;
+
+    font-size:1.35rem;
+
+}
+
+.nav-link{
+
+    font-weight:600;
+
+}
+
+.nav-link:hover{
+
+    opacity:.8;
+
+}
+
+/* ===========================
+          TITULOS
+=========================== */
+
+h1{
+
+    font-weight:700;
+
+}
+
+h2{
+
+    font-weight:700;
+
+}
+
+h3{
+
+    font-weight:700;
+
+}
+
+/* ===========================
+          CARDS
+=========================== */
+
+.card {
+    border: 1px solid var(--borda);
+    border-radius: var(--radius);
+    background: var(--card);
+    box-shadow: 0 10px 30px rgba(11, 93, 105, 0.08);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card:hover {
+    box-shadow: 0 14px 34px rgba(11, 93, 105, 0.12);
+}
+
+
+/* ===========================
+          BOTÕES
+=========================== */
+
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px 18px;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primaria);
+    border-color: var(--primaria);
+}
+
+.btn-primary:hover {
+    background-color: var(--primaria-hover);
+    border-color: var(--primaria-hover);
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background-color: var(--secundaria);
+    border-color: var(--secundaria);
+    color: #083f3a;
+}
+
+.btn-success:hover {
+    background-color: #2fae98;
+    border-color: #2fae98;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-danger,
+.btn-outline-danger:hover {
+    background-color: var(--cor-perigo);
+    border-color: var(--cor-perigo);
+}
+
+.btn-outline-primary {
+    color: var(--primaria);
+    border-color: var(--primaria);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primaria);
+    border-color: var(--primaria);
+}
+
+.btn-outline-success {
+    color: #278b7a;
+    border-color: var(--secundaria);
+}
+
+.btn-outline-success:hover {
+    background-color: var(--secundaria);
+    border-color: var(--secundaria);
+    color: #ffffff;
+}
+
+
+/* ===========================
+        FORMULÁRIOS
+=========================== */
+
+.form-label {
+    font-weight: 600;
+    color: var(--texto);
+}
+
+.form-control,
+.form-select {
+    min-height: 46px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--secundaria);
+    box-shadow: 0 0 0 0.2rem rgba(59, 191, 167, 0.18);
+}
+
+input[type="file"].form-control {
+    padding-top: 10px;
+}
+
+
+/* ===========================
+          TABELAS
+=========================== */
+
+.table-responsive {
+    border-radius: 14px;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: var(--primaria);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 0.9rem;
+}
+
+.table tbody td {
+    padding: 14px;
+    vertical-align: middle;
+    border-color: var(--borda);
+}
+
+.table tbody tr:hover {
+    background-color: rgba(59, 191, 167, 0.06);
+}
+
+
+/* ===========================
+      IMAGENS DE PRODUTOS
+=========================== */
+
+.imagem-produto-lista {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--borda);
+    background-color: #f1f4f4;
+}
+
+.imagem-produto-edicao {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid var(--borda);
+    box-shadow: 0 8px 24px rgba(11, 93, 105, 0.1);
+}
+
+.produto-sem-imagem {
+    display: inline-flex;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px dashed #b6c6c9;
+    background-color: #eef3f3;
+    color: var(--texto-claro);
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+
+/* ===========================
+           ALERTAS
+=========================== */
+
+.alert {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(11, 93, 105, 0.08);
+}
+
+
+/* ===========================
+         PÁGINA INICIAL
+=========================== */
+
+.hero-loja {
+    padding: 60px 45px;
+    border-radius: 24px;
+    background: linear-gradient(
+        135deg,
+        var(--primaria),
+        #13717d
+    );
+    color: #ffffff;
+    box-shadow: 0 16px 40px rgba(11, 93, 105, 0.2);
+}
+
+.hero-loja h1 {
+    font-weight: 800;
+}
+
+.hero-loja p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.card-modulo {
+    height: 100%;
+    transition: 0.2s ease;
+}
+
+.card-modulo:hover {
+    transform: translateY(-4px);
+}
+
+.icone-modulo {
+    display: inline-flex;
+    width: 54px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background-color: rgba(59, 191, 167, 0.18);
+    color: var(--primaria);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+
+/* ===========================
+           RODAPÉ
+=========================== */
+
+.rodape-loja {
+    margin-top: 40px;
+    padding: 24px 0;
+    color: var(--texto-claro);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+/* ===========================
+       RESPONSIVIDADE
+=========================== */
+
+@media (max-width: 768px) {
+
+    .hero-loja {
+        padding: 40px 24px;
+    }
+
+    .hero-loja h1 {
+        font-size: 2rem;
+    }
+
+    .imagem-produto-lista {
+        width: 60px;
+        height: 60px;
+    }
+
+    .acoes-tabela {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+}
